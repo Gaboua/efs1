@@ -8,7 +8,7 @@ class WelcomePage extends StatefulWidget {
   State<WelcomePage> createState() => _WelcomePageState();
 }
 
-final Whitebackgroudheight = 0.5;
+final Whitebackgroudheight = 0.6;
 
 class _WelcomePageState extends State<WelcomePage> {
   @override
@@ -33,7 +33,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     height: size.height * Whitebackgroudheight,
                     width: size.width,
                     decoration: BoxDecoration(
-                      color: Colors.grey,
+                      color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(26),
                       ),
