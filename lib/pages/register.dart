@@ -69,7 +69,7 @@ class _RegisterState extends State<Register> {
                 width: size.height / 4,
                 height: size.height / 5,
                 image: AssetImage(
-                    "images/Screenshot_2022-06-04_124037-removebg-preview.png"),
+                    "assets/Screenshot_2022-06-04_124037-removebg-preview.png"),
               ),
             ),
             Positioned(
@@ -88,29 +88,7 @@ class _RegisterState extends State<Register> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    TextFormField(
-                      decoration: const InputDecoration(
-                        hintText: "User Name",
-                        prefixIcon: Icon(
-                          Icons.person,
-                          color: colorBlack,
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20),
-                          ),
-                          borderSide: BorderSide(color: colorBlack),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20),
-                          ),
-                          borderSide: BorderSide(color: Colors.black),
-                        ),
-                      ),
-                    ),
-                  ],
+                  children: [textInput("User Name", Icons.person)],
                 ),
               ),
             ),
