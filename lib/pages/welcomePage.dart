@@ -51,7 +51,7 @@ class _WelcomePageState extends State<WelcomePage> {
               bottom: size.height * Whitebackgroudheight,
               child: Container(
                   height: size.height * 0.05,
-                  width: size.width / 2,
+                  width: size.width,
                   decoration: BoxDecoration(
                       color: Color(0xff120879),
                       borderRadius: BorderRadius.only(
