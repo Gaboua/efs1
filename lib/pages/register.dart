@@ -81,17 +81,42 @@ class _RegisterState extends State<Register> {
             ),
             Positioned(child: Text("Enter your")),
             Positioned(
-              bottom: size.height * Whitebackgroudheight / 1.8,
+              bottom: size.height * Whitebackgroudheight / 2.8,
               width: size.width / 1.2,
               left: size.width / 12,
               child: Form(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [textInput("User Name", Icons.person)],
+                  children: [
+                    textInput("User Name", Icons.person),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    textInput("Your Email", Icons.email),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    textInput("Your phone Number", Icons.phone),
+                    SizedBox(
+                      height: 20,
+                    ),
+                  ],
                 ),
               ),
             ),
+            Positioned(
+              width: size.width * 0.7,
+              height: size.height * 0.05,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    primary: buttonColor,
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                    textStyle:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+                child: Text("aa"),
+              ),
+            )
           ],
         ),
       ),
