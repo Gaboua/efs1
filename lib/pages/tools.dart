@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../consts.dart';
+
 class myAppBar extends AppBar {
   // ignore: use_key_in_widget_constructors
   myAppBar({
@@ -33,4 +35,28 @@ class myAppBar extends AppBar {
   final String titre;
   final void Function()? actionf;
   final void Function()? leadingf;
+}
+
+Widget textinput(String hint, IconData icon) {
+  return TextFormField(
+    decoration: InputDecoration(
+      hintText: hint,
+      prefixIcon: Icon(
+        icon,
+        color: colorBlack,
+      ),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(20),
+        ),
+        borderSide: BorderSide(color: colorBlack),
+      ),
+      enabledBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(20),
+        ),
+        borderSide: BorderSide(color: Colors.black),
+      ),
+    ),
+  );
 }

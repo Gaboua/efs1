@@ -1,3 +1,4 @@
+import 'package:efs1/pages/register.dart';
 import 'package:efs1/pages/welcomePage.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) {
-                  return WelcomePage();
+                  return Register();
                 }));
               },
               child: FlutterLogo(
