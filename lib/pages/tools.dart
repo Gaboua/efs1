@@ -40,7 +40,7 @@ class myAppBar extends AppBar {
 Widget textInput(String hint, IconData icon) {
   return TextFormField(
     decoration: InputDecoration(
-      contentPadding: EdgeInsets.symmetric(vertical: 20),
+      contentPadding: EdgeInsets.symmetric(vertical: 10),
       hintText: hint,
       prefixIcon: Icon(
         icon,
