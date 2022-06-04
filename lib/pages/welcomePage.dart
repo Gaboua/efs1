@@ -8,7 +8,7 @@ class WelcomePage extends StatefulWidget {
   State<WelcomePage> createState() => _WelcomePageState();
 }
 
-final Whitebackgroudheight = 0.5;
+final Whitebackgroudheight = 0.6;
 
 class _WelcomePageState extends State<WelcomePage> {
   @override
@@ -39,7 +39,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       ),
                     ))),
             Positioned(
-                bottom: size.height * Whitebackgroudheight,
+                bottom: size.height * Whitebackgroudheight - 1,
                 child: Container(
                   height: size.height * 0.05,
                   width: size.width / 2,
@@ -57,7 +57,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(26),
                       ))),
-            )
+            ),
           ],
         ),
       ),
