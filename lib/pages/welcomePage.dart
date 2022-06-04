@@ -33,13 +33,13 @@ class _WelcomePageState extends State<WelcomePage> {
                     height: size.height * Whitebackgroudheight,
                     width: size.width,
                     decoration: BoxDecoration(
-                      color: Colors.grey,
+                      color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(26),
                       ),
                     ))),
             Positioned(
-                bottom: size.height * Whitebackgroudheight,
+                bottom: size.height * Whitebackgroudheight - 1,
                 child: Container(
                   height: size.height * 0.05,
                   width: size.width / 2,
