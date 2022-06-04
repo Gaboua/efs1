@@ -42,7 +42,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 bottom: size.height * Whitebackgroudheight - 1,
                 child: Container(
                   height: size.height * 0.05,
-                  width: size.width / 2,
+                  width: size.width,
                   decoration: BoxDecoration(
                     color: Colors.white,
                   ),
