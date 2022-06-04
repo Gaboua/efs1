@@ -61,3 +61,22 @@ Widget textInput(String hint, IconData icon) {
     ),
   );
 }
+
+class Button extends ElevatedButton {
+  final void Function()? onClick;
+  final String text;
+  Button({
+    required this.onClick,
+    required this.text,
+  }) : super(
+          onPressed: onClick,
+          style: ElevatedButton.styleFrom(
+              primary: buttonColor,
+              shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(20)),
+              elevation: 3,
+              padding: EdgeInsets.symmetric(vertical: 10),
+              textStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+          child: Text(text),
+        );
+}

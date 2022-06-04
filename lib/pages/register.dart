@@ -81,7 +81,7 @@ class _RegisterState extends State<Register> {
             ),
             Positioned(child: Text("Enter your")),
             Positioned(
-              bottom: size.height * Whitebackgroudheight / 2.8,
+              bottom: size.height / 5.5,
               width: size.width / 1.2,
               left: size.width / 12,
               child: Form(
@@ -105,18 +105,30 @@ class _RegisterState extends State<Register> {
               ),
             ),
             Positioned(
-              width: size.width * 0.7,
-              height: size.height * 0.05,
-              child: ElevatedButton(
+                bottom: size.height / 9,
+                width: size.width / 1.2,
+                left: size.width / 12,
+                child: Button(
+                  text: "Continue",
+                  onClick: () {},
+                )),
+            Positioned(
+              bottom: size.height / 11,
+              left: size.width / 3.5,
+              child: Text("Already Have account?"),
+            ),
+            Positioned(
+              bottom: size.height / 15.7,
+              right: size.width / 6,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 15),
+                  primary: Color.fromARGB(255, 24, 20, 73),
+                ),
                 onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                    primary: buttonColor,
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                    textStyle:
-                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-                child: Text("aa"),
+                child: Text("Sign In"),
               ),
-            )
+            ),
           ],
         ),
       ),
