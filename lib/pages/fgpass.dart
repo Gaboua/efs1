@@ -11,9 +11,6 @@ class ForgetPassPage extends StatefulWidget {
 final Whitebackgroudheight = 0.6;
 TextEditingController emailController = TextEditingController();
 TextEditingController passwordController = TextEditingController();
-String? email;
-String? password;
-Color color = Colors.green;
 
 class _ForgetPassPageState extends State<ForgetPassPage> {
   @override
@@ -33,11 +30,15 @@ class _ForgetPassPageState extends State<ForgetPassPage> {
         child: Stack(
           children: [
             Positioned(
-              child: Image(image: AssetImage('../assets/forg.png')),
-              top: size.height / 7.5,
-              left: size.width / 2.7,
-              width: size.width / 4,
-              height: size.width / 4,
+              bottom: size.height * (Whitebackgroudheight + 0.025),
+              left: (size.width -
+                      size.height * (1 - Whitebackgroudheight - 0.15)) /
+                  2,
+              child: Image(
+                width: size.height * (1 - Whitebackgroudheight - 0.15),
+                height: size.height * (1 - Whitebackgroudheight - 0.05),
+                image: AssetImage("assets/forg.png"),
+              ),
             ),
             Positioned(
                 bottom: 0,
@@ -97,37 +98,34 @@ class _ForgetPassPageState extends State<ForgetPassPage> {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontFamily: "Font1",
-                        fontSize: 30,
+                        fontSize: 25,
                         fontStyle: FontStyle.italic),
                   ),
                 )),
             Positioned(
-                top: size.height * 0.48,
+                top: size.height * 0.5,
                 left: size.width * 0.15,
                 child: Container(
                   child: Text(
                     "Enter your email adress to reset your password ",
                     style: TextStyle(
                         fontFamily: "Font1",
-                        fontSize: 15,
+                        fontSize: 12,
                         fontStyle: FontStyle.italic),
                   ),
                 )),
             Positioned(
-              top: size.height * 0.7,
-              left: size.width * 0.15,
-              width: size.width * 0.7,
-              height: size.height * 0.05,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 102, 102, 1),
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                    textStyle:
-                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-                child: Text("aa"),
-              ),
-            )
+                top: size.height * 0.6,
+                left: size.width * 0.15,
+                width: size.width * 0.7,
+                height: size.height * 0.05,
+                child: textInput("mail", Icons.mail)),
+            Positioned(
+                top: size.height * 0.7,
+                left: size.width * 0.15,
+                width: size.width * 0.7,
+                height: size.height * 0.05,
+                child: Button(onClick: () {}, text: "sned"))
           ],
         ),
       ),
