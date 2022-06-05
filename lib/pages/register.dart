@@ -92,11 +92,13 @@ class _RegisterState extends State<Register> {
                     SizedBox(
                       height: 20,
                     ),
-                    textInput("Your Email", Icons.email),
+                    textInput("Your Email", Icons.email,
+                        input: TextInputType.emailAddress),
                     SizedBox(
                       height: 20,
                     ),
-                    textInput("Your phone Number", Icons.phone),
+                    textInput("Your phone Number", Icons.phone,
+                        input: TextInputType.number),
                     SizedBox(
                       height: 20,
                     ),
