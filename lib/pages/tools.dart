@@ -37,8 +37,10 @@ class myAppBar extends AppBar {
   final void Function()? leadingf;
 }
 
-Widget textInput(String hint, IconData icon) {
+Widget textInput(String hint, IconData icon,
+    {TextInputType input = TextInputType.text}) {
   return TextFormField(
+    keyboardType: input,
     decoration: InputDecoration(
       contentPadding: EdgeInsets.symmetric(vertical: 10),
       hintText: hint,
