@@ -1,4 +1,5 @@
 import 'package:efs1/consts.dart';
+import 'package:efs1/pages/fgpass.dart';
 import 'package:efs1/pages/tools.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,7 @@ class _OtpState extends State<Otp> {
                       ),
                     ))),
             Positioned(
-                bottom: size.height * Whitebackgroudheight,
+                bottom: size.height * Whitebackgroudheight - 1,
                 child: Container(
                   height: size.height * 0.05,
                   width: size.width / 2,
@@ -63,68 +64,66 @@ class _OtpState extends State<Otp> {
                       ))),
             ),
             Positioned(
-              bottom: size.height * Whitebackgroudheight + 15,
-              left: size.width / 3.4,
+              bottom: size.height * (Whitebackgroudheight + 0.025),
+              left: (size.width -
+                      size.height * (1 - Whitebackgroudheight - 0.15)) /
+                  2,
               child: Image(
-                width: size.height / 4,
-                height: size.height / 5,
-                image: AssetImage(
-                    "assets/verifcode.PNG"),
+                width: size.height * (1 - Whitebackgroudheight - 0.15),
+                height: size.height * (1 - Whitebackgroudheight - 0.15),
+                image: AssetImage("assets/verifcode.PNG"),
               ),
             ),
             Positioned(
-              bottom: size.height * Whitebackgroudheight - 60,
+              bottom: size.height * (Whitebackgroudheight - 0.1),
+              left: size.width / 12,
               child: Text(
                 "Verification Code",
                 style: TextStyle(fontSize: 30),
               ),
             ),
             Positioned(
-              bottom: size.height / 2.6,
+              bottom: size.height / 3,
               width: size.width / 1.2,
               left: size.width / 12,
               child: Form(
                 child: Column(
-                  
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    textInput("****", Icons.password,input: TextInputType.number),
-                    
+                    textInput("****", Icons.password,
+                        input: TextInputType.number),
                     SizedBox(
-                      
                       height: 20,
                     ),
-                    
                   ],
                 ),
               ),
             ),
             Positioned(
-                bottom: size.height / 3.2,
+                bottom: size.height / 5,
                 width: size.width / 1.2,
                 left: size.width / 12,
                 child: Button(
                   text: "Verify Now",
-                  onClick: () {},
+                  onClick: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ForgetPassPage()));
+                  },
                 )),
             Positioned(
-              bottom: size.height / 3.5,
-              left: size.width / 2.3,
-              
-              
+              bottom: size.height / 6.5,
+              left: size.width / 2 - 30,
               child: Text(
                 "Resend",
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Color(0xFFFB716A),
-                  
                 ),
-                
               ),
-              
             ),
-           
           ],
         ),
       ),

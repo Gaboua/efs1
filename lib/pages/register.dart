@@ -1,4 +1,5 @@
 import 'package:efs1/consts.dart';
+import 'package:efs1/pages/otp.dart';
 import 'package:efs1/pages/tools.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -111,7 +112,10 @@ class _RegisterState extends State<Register> {
                       width: size.width / 1.2,
                       child: Button(
                         text: "Continue",
-                        onClick: () {},
+                        onClick: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Otp()));
+                        },
                       ),
                     ),
                     Row(
