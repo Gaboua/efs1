@@ -12,7 +12,7 @@ class Register extends StatefulWidget {
   State<Register> createState() => _RegisterState();
 }
 
-final Whitebackgroudheight = 0.65;
+final Whitebackgroudheight = 0.6;
 
 class _RegisterState extends State<Register> {
   @override
@@ -43,7 +43,7 @@ class _RegisterState extends State<Register> {
                       ),
                     ))),
             Positioned(
-                bottom: size.height * Whitebackgroudheight,
+                bottom: size.height * Whitebackgroudheight - 1,
                 child: Container(
                   height: size.height * 0.05,
                   width: size.width / 2,
@@ -63,72 +63,75 @@ class _RegisterState extends State<Register> {
                       ))),
             ),
             Positioned(
-              bottom: size.height * Whitebackgroudheight + 15,
-              left: size.width / 3.4,
+              bottom: size.height * (Whitebackgroudheight + 0.025),
+              left: (size.width -
+                      size.height * (1 - Whitebackgroudheight - 0.15)) /
+                  2,
               child: Image(
-                width: size.height / 4,
-                height: size.height / 5,
+                width: size.height * (1 - Whitebackgroudheight - 0.15),
+                height: size.height * (1 - Whitebackgroudheight - 0.15),
                 image: AssetImage(
                     "assets/Screenshot_2022-06-04_124037-removebg-preview.png"),
               ),
             ),
             Positioned(
-              bottom: size.height * Whitebackgroudheight - 50,
+              bottom: size.height * (Whitebackgroudheight - 0.06),
+              left: size.width / 12,
               child: Text(
                 "Register",
                 style: TextStyle(fontSize: 30),
               ),
             ),
-            Positioned(child: Text("Enter your")),
             Positioned(
-              bottom: size.height / 5.5,
+                bottom: size.height * (Whitebackgroudheight - 0.08),
+                left: size.width / 10,
+                child: Text("Enter your")),
+            Positioned(
+              top: size.height * (1 - Whitebackgroudheight + 0.1),
               width: size.width / 1.2,
               left: size.width / 12,
               child: Form(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     textInput("User Name", Icons.person),
                     SizedBox(
-                      height: 20,
+                      height: size.height / 30,
                     ),
                     textInput("Your Email", Icons.email,
                         input: TextInputType.emailAddress),
                     SizedBox(
-                      height: 20,
+                      height: size.height / 30,
                     ),
                     textInput("Your phone Number", Icons.phone,
                         input: TextInputType.number),
                     SizedBox(
-                      height: 20,
+                      height: size.height / 40,
+                    ),
+                    SizedBox(
+                      width: size.width / 1.2,
+                      child: Button(
+                        text: "Continue",
+                        onClick: () {},
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Already Have account?"),
+                        GestureDetector(
+                            onTap: () {},
+                            child: Text(
+                              "Sign In",
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Color(0xff120879),
+                              ),
+                            )),
+                      ],
                     ),
                   ],
                 ),
-              ),
-            ),
-            Positioned(
-                bottom: size.height / 9,
-                width: size.width / 1.2,
-                left: size.width / 12,
-                child: Button(
-                  text: "Continue",
-                  onClick: () {},
-                )),
-            Positioned(
-              bottom: size.height / 11,
-              left: size.width / 3.5,
-              child: Text("Already Have account?"),
-            ),
-            Positioned(
-              bottom: size.height / 15.7,
-              right: size.width / 6,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 15),
-                  primary: Color.fromARGB(255, 24, 20, 73),
-                ),
-                onPressed: () {},
-                child: Text("Sign In"),
               ),
             ),
           ],

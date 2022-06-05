@@ -46,17 +46,17 @@ Widget textInput(String hint, IconData icon,
       hintText: hint,
       prefixIcon: Icon(
         icon,
-        color: colorBlack,
+        color: Color(0xff5D5D5D),
       ),
       focusedBorder: const OutlineInputBorder(
         borderRadius: BorderRadius.all(
-          Radius.circular(20),
+          Radius.circular(13),
         ),
         borderSide: BorderSide(color: colorBlack),
       ),
       enabledBorder: const OutlineInputBorder(
         borderRadius: BorderRadius.all(
-          Radius.circular(20),
+          Radius.circular(13),
         ),
         borderSide: BorderSide(color: Colors.black),
       ),
