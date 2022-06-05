@@ -41,8 +41,11 @@ Widget textInput(String hint, IconData icon,
     {TextInputType input = TextInputType.text}) {
   return TextFormField(
     keyboardType: input,
+    textAlign: hint == "****" ? TextAlign.center : TextAlign.start,
     decoration: InputDecoration(
-      contentPadding: EdgeInsets.symmetric(vertical: 10),
+      contentPadding: hint == "****"
+          ? EdgeInsets.only(right: 40, top: 10, bottom: 10)
+          : EdgeInsets.symmetric(vertical: 10),
       hintText: hint,
       prefixIcon: Icon(
         icon,
