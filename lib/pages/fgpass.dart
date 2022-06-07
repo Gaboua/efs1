@@ -1,5 +1,7 @@
+
 import 'package:efs1/pages/tools.dart';
 import 'package:flutter/material.dart';
+import 'package:efs1/pages/finger_print.dart';
 
 class ForgetPassPage extends StatefulWidget {
   const ForgetPassPage({Key? key}) : super(key: key);
@@ -105,7 +107,9 @@ class _ForgetPassPageState extends State<ForgetPassPage> {
                 bottom: size.height / 5,
                 width: size.width / 1.2,
                 left: size.width / 12,
-                child: Button(onClick: () {}, text: "Send email"))
+                child: Button(color: Color(0xfffb716a),
+                  onClick: () {Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => FingerPrint()));}, text: "Send email"))
           ],
         ),
       ),

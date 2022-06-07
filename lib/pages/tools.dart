@@ -70,13 +70,15 @@ Widget textInput(String hint, IconData icon,
 class Button extends ElevatedButton {
   final void Function()? onClick;
   final String text;
+  final Color color;
   Button({
     required this.onClick,
     required this.text,
+    required this.color,
   }) : super(
           onPressed: onClick,
           style: ElevatedButton.styleFrom(
-              primary: buttonColor,
+              primary: color,
               shape: new RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(20)),
               elevation: 3,

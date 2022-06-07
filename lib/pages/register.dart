@@ -112,6 +112,7 @@ class _RegisterState extends State<Register> {
                       width: size.width / 1.2,
                       child: Button(
                         text: "Continue",
+                        color: Color(0xfffb716a),
                         onClick: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) => Otp()));

@@ -1,21 +1,22 @@
+
 import 'package:efs1/consts.dart';
-import 'package:efs1/pages/fgpass.dart';
+import 'package:efs1/pages/otp.dart';
 import 'package:efs1/pages/tools.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class Otp extends StatefulWidget {
-  const Otp({Key? key}) : super(key: key);
+class FingerPrint extends StatefulWidget {
+  const FingerPrint({Key? key}) : super(key: key);
 
   @override
-  State<Otp> createState() => _OtpState();
+  State<FingerPrint> createState() => _FingerPrintState();
 }
 
-final Whitebackgroudheight = 0.65;
+final Whitebackgroudheight = 0.8;
 
-class _OtpState extends State<Otp> {
+class _FingerPrintState extends State<FingerPrint> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -25,7 +26,7 @@ class _OtpState extends State<Otp> {
       appBar: myAppBar(
         leadingf: () => Navigator.pop(context),
         actionf: () => Navigator.pop(context),
-        titre: "Verification ",
+        titre: "FingerPrint",
       ),
       body: SizedBox(
         height: size.height,
@@ -64,70 +65,51 @@ class _OtpState extends State<Otp> {
                       ))),
             ),
             Positioned(
-              bottom: size.height * (Whitebackgroudheight + 0.025),
-              left: (size.width -
-                      size.height * (1 - Whitebackgroudheight - 0.15)) /
-                  2,
-              child: Image(
-                width: size.height * (1 - Whitebackgroudheight - 0.15),
-                height: size.height * (1 - Whitebackgroudheight - 0.15),
-                image: AssetImage("assets/verifcode.PNG"),
-              ),
-            ),
-            Positioned(
               bottom: size.height * (Whitebackgroudheight - 0.1),
               left: size.width / 12,
               child: Text(
-                "Verification Code",
+                "FingerPrint",
                 style: TextStyle(fontSize: 30),
               ),
             ),
             Positioned(
-              bottom: size.height / 3,
+                bottom: size.height * (Whitebackgroudheight - 0.13),
+                left: size.width / 10,
+                child: Text("Enter your FingerPrint")),
+            Positioned(
+              top: size.height * (1 - Whitebackgroudheight +0.15),
               width: size.width / 1.2,
               left: size.width / 12,
               child: Form(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    textInput("****", Icons.password,
-                        input: TextInputType.number),
+                    Image(
+                width: size.height * ( Whitebackgroudheight - 0.25),
+                height: size.height * ( Whitebackgroudheight - 0.25),
+                image: AssetImage(
+                    "Finger.png"),
+              ),
+             
                     SizedBox(
-                      height: 20,
+                      width: size.width / 1.2,
+                      child: Button(
+                        text: "Skip",
+                        onClick: () { },
+                        color: Color(0xff8fb4f9),
+                      ),
                     ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-                bottom: size.height / 5,
-                width: size.width / 1.2,
-                left: size.width / 12,
-                child: Button(
-                  text: "Verify Now",
-                  color: Color(0xfffb716a),
-                  onClick: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ForgetPassPage()));
-                  },
-                )),
-            Positioned(
-              bottom: size.height / 6.5,
-              left: size.width / 2 - 30,
-              child: Text(
-                "Resend",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFFFB716A),
-                ),
-              ),
-            ),
+                   
+          ],
+        ),
+      ),
+                         ),
+
           ],
         ),
       ),
     );
+
+
+
   }
 }
