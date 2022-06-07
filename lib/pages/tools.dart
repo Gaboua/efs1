@@ -44,8 +44,10 @@ Widget textInput(String hint, IconData icon,
     textAlign: hint == "****" ? TextAlign.center : TextAlign.start,
     decoration: InputDecoration(
       contentPadding: hint == "****"
-          ? EdgeInsets.only(right: 40, top: 10, bottom: 10)
-          : EdgeInsets.symmetric(vertical: 10),
+          ? EdgeInsets.only(
+              right: 45,
+            )
+          : EdgeInsets.symmetric(vertical: 0),
       hintText: hint,
       prefixIcon: Icon(
         icon,

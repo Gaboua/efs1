@@ -22,43 +22,45 @@ class _WelcomePageState extends State<WelcomePage> {
         actionf: () => Navigator.pop(context),
         titre: "Sign In",
       ),
-      body: SizedBox(
-        height: size.height,
-        width: size.width,
-        child: Stack(
-          children: [
-            Positioned(
-                bottom: 0,
-                child: Container(
-                    height: size.height * Whitebackgroudheight,
+      body: SingleChildScrollView(
+        child: SizedBox(
+          height: size.height,
+          width: size.width,
+          child: Stack(
+            children: [
+              Positioned(
+                  bottom: 0,
+                  child: Container(
+                      height: size.height * Whitebackgroudheight,
+                      width: size.width,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(26),
+                        ),
+                      ))),
+              Positioned(
+                  bottom: size.height * Whitebackgroudheight - 1,
+                  child: Container(
+                    height: size.height * 0.05,
                     width: size.width,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(26),
-                      ),
-                    ))),
-            Positioned(
-                bottom: size.height * Whitebackgroudheight - 1,
+                    ),
+                  )),
+              Positioned(
+                bottom: size.height * Whitebackgroudheight,
                 child: Container(
-                  height: size.height * 0.05,
-                  width: size.width,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
-                )),
-            Positioned(
-              bottom: size.height * Whitebackgroudheight,
-              child: Container(
-                  height: size.height * 0.05,
-                  width: size.width,
-                  decoration: BoxDecoration(
-                      color: Color(0xff120879),
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(26),
-                      ))),
-            ),
-          ],
+                    height: size.height * 0.05,
+                    width: size.width,
+                    decoration: BoxDecoration(
+                        color: Color(0xff120879),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(26),
+                        ))),
+              ),
+            ],
+          ),
         ),
       ),
     );
