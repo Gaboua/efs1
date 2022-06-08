@@ -69,7 +69,10 @@ class _FingerPrintState extends State<FingerPrint> {
                 left: size.width / 12,
                 child: Text(
                   "FingerPrint",
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 30,
+                      fontStyle: FontStyle.italic),
                 ),
               ),
               Positioned(

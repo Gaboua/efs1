@@ -83,7 +83,10 @@ class _RegisterState extends State<Register> {
                 left: size.width / 12,
                 child: Text(
                   "Register",
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 30,
+                      fontStyle: FontStyle.italic),
                 ),
               ),
               Positioned(

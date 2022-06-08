@@ -80,9 +80,8 @@ class _ForgetPassPageState extends State<ForgetPassPage> {
                     child: Text(
                       "Forget Password ?",
                       style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Font1",
-                          fontSize: 25,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 30,
                           fontStyle: FontStyle.italic),
                     ),
                   )),
@@ -92,10 +91,8 @@ class _ForgetPassPageState extends State<ForgetPassPage> {
                   child: Container(
                     child: Text(
                       "Enter your email adress to reset your password ",
-                      style: TextStyle(
-                          fontFamily: "Font1",
-                          fontSize: 12,
-                          fontStyle: FontStyle.italic),
+                      // style:
+                      //     TextStyle(fontSize: 12, fontStyle: FontStyle.italic),
                     ),
                   )),
               Positioned(
