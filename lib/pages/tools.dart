@@ -13,21 +13,23 @@ class myAppBar extends AppBar {
           elevation: 0,
           title: Text(
             titre,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
+            style: TextStyle(
+              fontSize: 15,
+            ),
           ),
           centerTitle: true,
           leading: IconButton(
               onPressed: leadingf,
               icon: Icon(
-                Icons.arrow_back_ios,
-                size: 15,
+                Icons.arrow_back_ios_sharp,
+                size: 13,
               )),
           actions: [
             IconButton(
               onPressed: actionf,
-              icon: Text(
-                "×",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w300),
+              icon: Icon(
+                Icons.close_sharp,
+                size: 17.5,
               ),
             ),
           ],

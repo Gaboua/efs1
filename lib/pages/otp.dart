@@ -80,7 +80,10 @@ class _OtpState extends State<Otp> {
                 left: size.width / 12,
                 child: Text(
                   "Verification Code",
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 30,
+                      fontStyle: FontStyle.italic),
                 ),
               ),
               Positioned(

@@ -19,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) {
-                  return Register();
+                  return WelcomePage();
                 }));
               },
               child: FlutterLogo(
