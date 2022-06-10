@@ -1,5 +1,5 @@
-import 'package:efs1/pages/register.dart';
-import 'package:efs1/pages/welcomePage.dart';
+import 'package:efs1/pages/authentication/register.dart';
+import 'package:efs1/pages/authentication/welcomePage.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {

@@ -1,6 +1,7 @@
 import 'package:efs1/consts.dart';
-import 'package:efs1/pages/otp.dart';
-import 'package:efs1/pages/tools.dart';
+import 'package:efs1/pages/authentication/otp.dart';
+import 'package:efs1/pages/authentication/tools.dart';
+import 'package:efs1/pages/logout.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -98,7 +99,12 @@ class _FingerPrintState extends State<FingerPrint> {
                       width: size.width / 1.2,
                       child: Button(
                         text: "Skip",
-                        onClick: () {},
+                        onClick: () {
+                          Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(builder: (context) {
+                            return Logout();
+                          }));
+                        },
                         color: Color(0xff8fb4f9),
                       ),
                     ),

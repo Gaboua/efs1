@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../consts.dart';
+import '../../consts.dart';
 
 class myAppBar extends AppBar {
   // ignore: use_key_in_widget_constructors

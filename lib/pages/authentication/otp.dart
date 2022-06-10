@@ -1,6 +1,7 @@
 import 'package:efs1/consts.dart';
-import 'package:efs1/pages/fgpass.dart';
-import 'package:efs1/pages/tools.dart';
+import 'package:efs1/pages/authentication/fgpass.dart';
+import 'package:efs1/pages/authentication/passwordPage.dart';
+import 'package:efs1/pages/authentication/tools.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -118,7 +119,7 @@ class _OtpState extends State<Otp> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ForgetPassPage()));
+                              builder: (context) => PasswordPage()));
                     },
                   )),
               Positioned(
