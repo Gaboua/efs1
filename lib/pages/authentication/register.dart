@@ -1,28 +1,33 @@
-import 'package:efs1/pages/fgpass.dart';
-import 'package:efs1/pages/register.dart';
-import 'package:efs1/pages/tools.dart';
+import 'package:efs1/consts.dart';
+import 'package:efs1/pages/authentication/otp.dart';
+import 'package:efs1/pages/authentication/tools.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-class WelcomePage extends StatefulWidget {
-  const WelcomePage({Key? key}) : super(key: key);
+class Register extends StatefulWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
-  State<WelcomePage> createState() => _WelcomePageState();
+  State<Register> createState() => _RegisterState();
 }
 
-final Whitebackgroudheight = 0.5;
+final Whitebackgroudheight = 0.6;
 
-class _WelcomePageState extends State<WelcomePage> {
+class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    print(size.height);
+    print(size.width);
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: Theme.of(context).accentColor,
       appBar: myAppBar(
         leadingf: () => Navigator.pop(context),
         actionf: () => Navigator.pop(context),
-        titre: "Sign In",
+        titre: "Register",
       ),
       body: SingleChildScrollView(
         child: SizedBox(
@@ -69,16 +74,15 @@ class _WelcomePageState extends State<WelcomePage> {
                 child: Image(
                   width: size.height * (1 - Whitebackgroudheight - 0.15),
                   height: size.height * (1 - Whitebackgroudheight - 0.15),
-                  image: AssetImage("assets/Welcome.png"),
+                  image: AssetImage(
+                      "assets/Screenshot_2022-06-04_124037-removebg-preview.png"),
                 ),
               ),
               Positioned(
-                bottom: size.height < 550
-                    ? size.height * (Whitebackgroudheight - 0.07)
-                    : size.height * (Whitebackgroudheight - 0.1),
+                bottom: size.height * (Whitebackgroudheight - 0.07),
                 left: size.width / 12,
                 child: Text(
-                  "Welcome Back !",
+                  "Register",
                   style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 30,
@@ -86,15 +90,11 @@ class _WelcomePageState extends State<WelcomePage> {
                 ),
               ),
               Positioned(
-                  bottom: size.height < 550
-                      ? size.height * (Whitebackgroudheight - 0.1)
-                      : size.height * (Whitebackgroudheight - 0.13),
+                  bottom: size.height * (Whitebackgroudheight - 0.1),
                   left: size.width / 10,
                   child: Text("Enter your")),
               Positioned(
-                top: size.height < 550
-                    ? size.height * (1 - Whitebackgroudheight + 0.135)
-                    : size.height * (1 - Whitebackgroudheight + 0.165),
+                top: size.height * (1 - Whitebackgroudheight + 0.135),
                 width: size.width / 1.2,
                 left: size.width / 12,
                 child: Form(
@@ -106,48 +106,28 @@ class _WelcomePageState extends State<WelcomePage> {
                             ? size.height / 60
                             : size.height / 30,
                       ),
-                      textInput("Password", Icons.lock,
+                      textInput("Your Email", Icons.email,
                           input: TextInputType.emailAddress),
-                      // SizedBox(
-                      //   height: size.height / 30,
-                      // ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ForgetPassPage()));
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.all(2.0),
-                              child: Text(
-                                "Forget Password ?",
-                                style: TextStyle(
-                                    color: Color(0xfffb716a), fontSize: 12),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
                       SizedBox(
                         height: size.height < 550
-                            ? size.height / 120
-                            : size.height / 60,
+                            ? size.height / 60
+                            : size.height / 30,
+                      ),
+                      textInput("Your phone Number", Icons.phone,
+                          input: TextInputType.number),
+                      SizedBox(
+                        height: size.height < 550
+                            ? size.height / 80
+                            : size.height / 40,
                       ),
                       SizedBox(
                         width: size.width / 1.2,
                         child: Button(
-                          text: "Sign In",
+                          text: "Continue",
                           color: Color(0xfffb716a),
                           onClick: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Register()));
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => Otp()));
                           },
                         ),
                       ),
@@ -155,11 +135,11 @@ class _WelcomePageState extends State<WelcomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Don't Have account?"),
+                          Text("Already Have account?"),
                           GestureDetector(
                               onTap: () {},
                               child: Text(
-                                "Sign Up",
+                                "Sign In",
                                 style: TextStyle(
                                   fontSize: 15,
                                   color: Color(0xff120879),

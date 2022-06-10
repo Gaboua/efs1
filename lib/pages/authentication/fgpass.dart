@@ -1,6 +1,6 @@
-import 'package:efs1/pages/tools.dart';
+import 'package:efs1/pages/authentication/tools.dart';
 import 'package:flutter/material.dart';
-import 'package:efs1/pages/finger_print.dart';
+import 'package:efs1/pages/authentication/finger_print.dart';
 
 class ForgetPassPage extends StatefulWidget {
   const ForgetPassPage({Key? key}) : super(key: key);

@@ -1,4 +1,4 @@
-import 'package:efs1/pages/homePage.dart';
+import 'package:efs1/pages/authentication/homePage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
